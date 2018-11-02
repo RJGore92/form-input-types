@@ -11,13 +11,15 @@
   <body>
     <div class="container">
       <form id="testForm">
-        <h3>Cheeseburgers</h3>
+        <div class="card bgSalmon">
+          <h3>Cheeseburgers</h3>
+        </div>
         <div class="row">
           <div class="col-md-4">
             <div class="card">
               <div class="card-body">
                 <label>Input how many basic cheeseburgers you want.</label>
-                <input type="number" id="testInputA" value="1">
+                <input type="number" id="burgerPlainInput" value="1">
               </div>
             </div>
           </div>
@@ -25,7 +27,7 @@
             <div class="card">
               <div class="card-body">
                 <label>Input how many double cheeseburgers you want.</label>
-                <input type="number" id="testInputB" value="1">
+                <input type="number" id="burgerDoubleInput" value="1">
               </div>
             </div>
           </div>
@@ -33,7 +35,65 @@
             <div class="card">
               <div class="card-body">
                 <label>Input how many deluxe cheeseburgers you want.</label>
-                <input type="number" id="testInputC" value="1">
+                <input type="number" id="burgerDeluxeInput" value="1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card bgYellow">
+          <h3>Fries</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <label>Input how many orders of small fries you want.</label>
+                <input type="number" id="smlFryInput" value="1">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <label>Input how many orders of medium fries you want.</label>
+                <input type="number" id="medFryInput" value="1">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <label>Input how many orders of large fries you want.</label>
+                <input type="number" id="lrgFryInput" value="1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card bgBlue">
+          <h3>Drinks</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <label>Input how many soft drinks you want.</label>
+                <input type="number" id="softDrinkInput" value="1">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <label>Input how many milkshakes you want.</label>
+                <input type="number" id="milkshakeInput" value="1">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <label>Input how many juice drinks you want.</label>
+                <input type="number" id="juiceDrinksInput" value="1">
               </div>
             </div>
           </div>
@@ -43,16 +103,24 @@
           Place Order
         </button>
       </form>
-    </div>
-    <div class="results">
-      <div class="row" id="receiptOutput">
-        <div class="col-md-4">
-          <ul id="testOutput">
-
-          </ul>
+      <div class="results" id="mainReceipt">
+        <p id="orderSuccess"></p>
+        <div class="row" id="receiptOutput">
+          <div class="col-md-4">
+            <ul id="foodOutput">
+            </ul>
+          </div>
+          <div class="col-md-2" id="costOutput">
+          </div>
         </div>
-        <div class="col-md-2" id="costOutput">
+        <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <p>Your total is:</p>
+          </div>
+          <div class="col-md-2" id="receiptTotal">
 
+          </div>
         </div>
       </div>
     </div>
